@@ -1,21 +1,21 @@
 // обновленный вид записи конструктора
 class User {
-constructor(name, id) {
-    this.name = name;
-    this.id = id;
-    this.human = true;
-}
+    constructor(name, id) {
+        this.name = name;
+        this.id = id;
+        this.human = true;
+    }
     hello() {
-        console.log('hello'  + this.name);
+        console.log('hello' + this.name);
     }
 }
 
 let ivan = new User('Ivan', 25),
     alex = new User('alex', 44);
 
-    console.log(ivan);
-    console.log(alex);
-    ivan.hello();
+console.log(ivan);
+console.log(alex);
+ivan.hello();
 
 
 
@@ -30,8 +30,8 @@ let ivan = new User('Ivan', 25),
 // Например:
 
 function User(name) {
-  this.name = name;
-  this.isAdmin = false;
+    this.name = name;
+    this.isAdmin = false;
 }
 
 let user = new User("Вася");
@@ -47,8 +47,8 @@ alert(user.isAdmin); // false
 
 let menu = document.querySelector('.menu'),
     text = document.createTextNode('Пятый пункт');
-        menu.appendChild(text);
-        menu.classList.add('menu-item');
+menu.appendChild(text);
+menu.classList.add('menu-item');
 
 let menu = document.querySelector('.menu');
 let children = menu.children;
@@ -77,9 +77,9 @@ var adv = document.getElementById("adv");
 adv.parentNode.removeChild(adv);
 
 // Каждые 2 сек выводится Hello
-let timerId = setTimeout(function log(){
-console.log('Hello');
-setTimeout(log, 2000);
+let timerId = setTimeout(function log() {
+    console.log('Hello');
+    setTimeout(log, 2000);
 })
 
 
@@ -88,7 +88,21 @@ setTimeout(log, 2000);
 // при клике делает кнопку красного цвета
 
 let Btn = document.querySelector('button');
-    Btn.addEventListener('click', function(){
-        console.log(this);
-        this.style.backgroundColor = 'red';
-    })
+Btn.addEventListener('click', function () {
+    console.log(this);
+    this.style.backgroundColor = 'red';
+})
+
+
+
+// стрелочные функции ES6
+let obj = {
+    number: 5,
+    sayNumber = function () {
+        let say = () => {
+            console.log(this);
+        };
+        say();
+    }
+}
+obj.sayNumber();
