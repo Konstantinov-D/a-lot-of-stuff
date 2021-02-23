@@ -81,3 +81,14 @@ let timerId = setTimeout(function log(){
 console.log('Hello');
 setTimeout(log, 2000);
 })
+
+
+
+
+// при клике делает кнопку красного цвета
+
+let Btn = document.querySelector('button');
+    Btn.addEventListener('click', function(){
+        console.log(this);
+        this.style.backgroundColor = 'red';
+    })
