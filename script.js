@@ -106,3 +106,17 @@ let obj = {
     }
 }
 obj.sayNumber();
+
+
+
+
+
+
+// ES6
+ function calcOrDouble (number, basis = 2) {
+
+     console.log(number*basis);
+ }
+
+ calcOrDouble(3,5);
+ calcOrDouble(6);
