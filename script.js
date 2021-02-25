@@ -113,10 +113,39 @@ obj.sayNumber();
 
 
 // ES6
- function calcOrDouble (number, basis = 2) {
+function calcOrDouble(number, basis = 2) {
 
-     console.log(number*basis);
- }
+    console.log(number * basis);
+}
 
- calcOrDouble(3,5);
- calcOrDouble(6);
+calcOrDouble(3, 5);
+calcOrDouble(6);
+
+
+
+
+//  ES6 КЛАССЫ
+class Rectangle {
+    constructor(height, width = 20) {
+        this.height = height;
+        this.width = width;
+    }
+    calcArea() {
+        return this.height * this.width;
+    }
+}
+const square = new Rectangle(10);
+
+console.log(square.calcArea());
+
+
+
+
+// ES6 операторы разворота spread
+// в консоль логе развернутся все данные массивов
+let video = ['youtube', 'vimeo', 'rutube'];
+let blogs = ['wordpress', 'livejournal', 'blogger'];
+let internet = [...video, ...blogs, 'vk'];
+
+console.log(internet);
+
